@@ -40,13 +40,14 @@ void squares(double a, double b, double c) {
 
     if (d == 0) {
         X1 = (-b + sqrt(d)) / (2 * a);
-        // printf(X1);
+        printf("X1=X2=%f", X1);
     }
 
     if (d > 0) {
         X1 = (-b + sqrt(d)) / (2 * a);
         X2 = (-b - sqrt(d)) / (2 * a);
-        // printf(X1, X2);
+        printf("X1=%f",X1);
+        printf("X2=%f",X2);
     }
 
     if (d < 0) {
