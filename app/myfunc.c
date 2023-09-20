@@ -52,7 +52,6 @@ void squares(double a, double b, double c) {
         printf("Нет корней");
     }
 }
-}
 
 void printStdoutMessages() {
     printf("This is a test message from myfunc.c\n");
