@@ -39,21 +39,19 @@ int squares(double a, double b, double c) {
 
     d = (b * b) - (4 * a * c);
 
-    if (d == 0)
-    {
-    X1 = (-b + sqrt(d)) / (2 * a);
+    if (d == 0) {
+        X1 = (-b + sqrt(d)) / (2 * a);
     }
 
-    if (d > 0)
-    {
+    if (d > 0) {
         X1 = (-b + sqrt(d)) / (2 * a);
         X2 = (-b - sqrt(d)) / (2 * a);
     }
 
-    if (d < 0)
-    {
+    if (d < 0) {
         printf("Нет корней");
     }
+}
 
 void printStdoutMessages() {
     printf("This is a test message from myfunc.c\n");
