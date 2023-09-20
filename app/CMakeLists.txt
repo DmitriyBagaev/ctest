@@ -6,8 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_definitions ("-Wall -Wextra -Wpedantic -Weffc++ -Wconversion -Wunreachable-code -Wold-style-cast")
 
-target_link_libraries(ctest m)
-
 set(SOURCES
         main.c
         myfunc.c
@@ -18,3 +16,5 @@ set(HEADERS
         )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+
+target_link_libraries(ctest m)
