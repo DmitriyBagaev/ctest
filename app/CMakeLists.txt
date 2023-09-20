@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_definitions ("-Wall -Wextra -Wpedantic -Weffc++ -Wconversion -Wunreachable-code -Wold-style-cast -lm")
 
-target_link_libraries(${ctest} m)
+target_link_libraries(<math.h> m)
 
 set(SOURCES
         main.c
