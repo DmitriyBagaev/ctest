@@ -33,19 +33,21 @@ int fibonachi(int num) {
     return next;
 }
 
-int squares(double a, double b, double c) {
-    double d = 0;
+double squares(double a, double b, double c) {
+    double d;
     double X1, X2;
 
     d = (b * b) - (4 * a * c);
 
     if (d == 0) {
         X1 = (-b + sqrt(d)) / (2 * a);
+        // printf(X1);
     }
 
     if (d > 0) {
         X1 = (-b + sqrt(d)) / (2 * a);
         X2 = (-b - sqrt(d)) / (2 * a);
+        // printf(X1, X2);
     }
 
     if (d < 0) {

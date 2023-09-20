@@ -5,7 +5,7 @@ int myfunc(int b);
 
 int fibonachi(int num);
 
-int squares(double a, double b, double c);
+double squares(double a, double b, double c);
 
 void printStdoutMessages();
 
