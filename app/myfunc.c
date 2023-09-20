@@ -33,9 +33,9 @@ int fibonachi(int num) {
     return next;
 }
 
-int squares(int a, int b, int c) {
-    int d = 0;
-    int X1, X2;
+int squares(double a, double b, double c) {
+    double d = 0;
+    double X1, X2;
 
     d = (b * b) - (4 * a * c);
 
