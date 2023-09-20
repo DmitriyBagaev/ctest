@@ -1,4 +1,5 @@
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "myfunc.h"
@@ -31,6 +32,26 @@ int fibonachi(int num) {
 
     return next;
 }
+
+int squares(int a, int b, int c) {
+    int d = 0;
+    d = (b * b) - (4 * a * c);
+
+    if (d == 0)
+    {
+    X1 = (-b + sqrt(d)) / (2 * a);
+    }
+
+    if (d > 0)
+    {
+        X1=(-b + sqrt(d)) / (2 * a);
+        X2=(-b - sqrt(d)) / (2 * a);
+    }
+
+    if (d < 0)
+    {
+        printf("Нет корней");
+    }
 
 void printStdoutMessages() {
     printf("This is a test message from myfunc.c\n");

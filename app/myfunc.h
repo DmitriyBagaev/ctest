@@ -5,6 +5,8 @@ int myfunc(int b);
 
 int fibonachi(int num);
 
+int squares(int a, int b, int c);
+
 void printStdoutMessages();
 
 extern int val;
