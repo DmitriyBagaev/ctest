@@ -35,6 +35,8 @@ int fibonachi(int num) {
 
 int squares(int a, int b, int c) {
     int d = 0;
+    int X1, X2;
+
     d = (b * b) - (4 * a * c);
 
     if (d == 0)
@@ -44,8 +46,8 @@ int squares(int a, int b, int c) {
 
     if (d > 0)
     {
-        X1=(-b + sqrt(d)) / (2 * a);
-        X2=(-b - sqrt(d)) / (2 * a);
+        X1 = (-b + sqrt(d)) / (2 * a);
+        X2 = (-b - sqrt(d)) / (2 * a);
     }
 
     if (d < 0)
