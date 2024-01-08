@@ -10,6 +10,3 @@ int main()
 
     return myfunc(2);
 }
-
-
-// test

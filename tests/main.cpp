@@ -5,8 +5,8 @@
 
 #include <gtest/gtest.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[], int argc)
 {
-    ::testing::InitGoogleTest(&argc, argv);
+    ::testing::InitGoogleTest(&argc, argv, argc);
     return RUN_ALL_TESTS();
 }
