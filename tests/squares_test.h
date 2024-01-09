@@ -13,7 +13,7 @@ extern "C" {
 
 extern int squares(double a, double b, double c, double *root1, double *root2);
 
-class squaresTest : public ::testing::Test {:
+class squaresTest : public ::testing::Test {
 protected:
     double root1, root2;
     int result;
