@@ -5,9 +5,16 @@
 
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
-    buffer [0] = b + 4;
-    // здесь должен ругаться sonarcloud, т.к. утечка памяти
-    return buffer[0];
+    if (buffer == NULL) {
+        // Обработка ошибки выделения памяти
+        return -1; // Или другой код ошибки
+    }
+
+    buffer[0] = b + 4;
+    int returnValue = buffer[0];
+
+    free(buffer); // Освобождение выделенной памяти
+    return returnValue;
 }
 
 int val;
