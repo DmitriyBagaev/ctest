@@ -13,6 +13,12 @@ extern "C" {
 
 extern int squares(double a, double b, double c, double *root1, double *root2);
 
+class squaresTest : public ::testing::Test {
+protected:
+    double root1, root2;
+    int result;
+};
+
 TEST(squaresTest, OneRoot) {
 result = squares(1, -2, 1, &root1, &root2);
 ASSERT_EQ(result, 1);
