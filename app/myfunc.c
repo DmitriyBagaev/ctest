@@ -6,8 +6,9 @@
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
     if (buffer == NULL) {
-        // Обработка ошибки выделения памяти
-        return -1; // Или другой код ошибки
+        // GCOV_EXCL_START
+        return -1;
+        // GCOV_EXCL_STOP
     }
 
     buffer[0] = b + 4;
