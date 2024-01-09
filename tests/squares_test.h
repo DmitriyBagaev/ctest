@@ -13,35 +13,28 @@ extern "C" {
 
 extern int squares(double a, double b, double c, double *root1, double *root2);
 
-class squaresTest : public ::testing::Test {
-protected:
+class squaresTest : public ::testing::Test {:
     double root1, root2;
     int result;
-
-    void Override() override {
-        root1 = 0;
-        root2 = 0;
-        result = 0;
-    }
 };
 
 TEST(squaresTest, OneRoot) {
-result = squares(1, -2, 1, *root1, *root2);
+result = squares(1, -2, 1, &root1, &root2);
 ASSERT_EQ(result, 1);
 }
 
 TEST(squaresTest, TwoRoots) {
-result = squares(1, -3, 2, *root1, *root2);
+result = squares(1, -3, 2, &root1, &root2);
 ASSERT_EQ(result, 2);
 }
 
 TEST(squaresTest, NoRoots) {
-result = squares(1, 0, 1, *root1, *root2);
+result = squares(1, 0, 1, &root1, &root2);
 ASSERT_EQ(result, 0);
 }
 
 TEST(squaresTest, NotSquare) {
-result = squares(0, 2, 1, *root1, *root2);
+result = squares(0, 2, 1, &root1, &root2);
 ASSERT_EQ(result, -1);
 }
 
