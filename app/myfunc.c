@@ -32,26 +32,36 @@ int fibonachi(int num) {
     return next;
 }
 
-void squares(double a, double b, double c) {
-    double d, X1, X2;
+typedef struct {
+    int numRoots; // Количество корней: 0, 1, 2 или -1, если уравнение не квадратное
+    double root1; // Первый корень
+    double root2; // Второй корень
+} Roots;
+
+Roots squares(double a, double b, double c) {
+    Roots result;
+    double d;
+
+    if (a == 0) {
+        result.numRoots = -1; // Уравнение не квадратное
+        return result;
+    }
+
     d = (b * b) - (4 * a * c);
 
-    if (d == 0) {
-        X1 = (-b + sqrt(d)) / (2 * a);
-        printf("X1=X2=%f", X1);
-    }
-
     if (d > 0) {
-        X1 = (-b + sqrt(d)) / (2 * a);
-        X2 = (-b - sqrt(d)) / (2 * a);
-        printf("X1=%f\n",X1);
-        printf("X2=%f",X2);
+        result.numRoots = 2;
+        result.root1 = (-b + sqrt(d)) / (2 * a);
+        result.root2 = (-b - sqrt(d)) / (2 * a);
+    } else if (d == 0) {
+        result.numRoots = 1;
+        result.root1 = -b / (2 * a);
+    } else {
+        result.numRoots = 0;
     }
-
-    if (d < 0) {
-        printf("Нет корней");
-    }
+    return result;
 }
+
 
 void printStdoutMessages() {
     printf("This is a test message from myfunc.c\n");

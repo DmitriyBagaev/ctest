@@ -12,13 +12,16 @@ extern "C" {
 }
 
 TEST(squaresTest, OneRoot) {
-    ASSERT_EQ(squares(1.0, -2.0, 1.0);
+    ASSERT_EQ(squares(1), 1);
 }
 TEST(squaresTest, TwoRoots) {
-    ASSERT_EQ(squares(1.0, -3.0, 2.0);
+    ASSERT_EQ(squares(2), 2);
 }
 TEST(squaresTest, NoRoots) {
-    ASSERT_EQ(squares(1.0, 0.0, 1.0);
+    ASSERT_EQ(squares(0), 0);
+}
+TEST(squaresTest, NotSquare) {
+ASSERT_EQ(squares(-1), -1);
 }
 
 #endif // SQUARES_H
