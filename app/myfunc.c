@@ -6,13 +6,12 @@
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
     if (buffer == NULL) {
-            return NULL;
+        return buffer[0];
     }
 
     buffer[0] = b + 4;
-    int returnValue = buffer[0];
     free(buffer);
-    return returnValue;
+    return buffer[0];
 }
 
 int val;
