@@ -12,8 +12,9 @@ int myfunc(int b) {
     }
 
     buffer[0] = b + 4;
+    int returnValue = buffer[0];
     free(buffer);
-    return buffer[0];
+    return returnValue;
 }
 
 int val;
