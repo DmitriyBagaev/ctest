@@ -6,7 +6,6 @@
 int main()
 {
     printf("Hello World!\n");
-    Roots(1.0, 20.0, 1.0);
 
     return myfunc(2);
 }
