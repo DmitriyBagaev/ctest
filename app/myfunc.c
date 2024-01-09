@@ -6,7 +6,9 @@
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
     if (buffer == NULL) {
-        return buffer[0];
+        // LCOV_EXCL_START
+        return -1;
+        // LCOV_EXCL_STOP
     }
 
     buffer[0] = b + 4;
