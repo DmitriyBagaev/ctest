@@ -11,6 +11,7 @@ include(GoogleTest)
 
 set (TESTS
         fibonachi_test.h
+        squares_test.h
         tst_stdout.h
         tst_test1.h
         )
