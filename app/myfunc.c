@@ -4,7 +4,10 @@
 #include <math.h>
 
 int myfunc(int b) {
-    return 1;
+    char *buffer = malloc(sizeof(char) * 1000);
+    buffer [0] = b + 4;
+    // здесь должен ругаться sonarcloud, т.к. утечка памяти
+    return buffer[0];
 }
 
 int val;
