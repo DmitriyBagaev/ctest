@@ -32,34 +32,25 @@ int fibonachi(int num) {
     return next;
 }
 
-typedef struct {
-    int numRoots; // Количество корней: 0, 1, 2 или -1, если уравнение не квадратное
-    double root1; // Первый корень
-    double root2; // Второй корень
-} Roots;
-
-Roots squares(double a, double b, double c) {
-    Roots result;
+int squares(double a, double b, double c, double *root1, double *root2) {
     double d;
 
     if (a == 0) {
-        result.numRoots = -1; // Уравнение не квадратное
-        return result;
+        return -1; // Уравнение не квадратное
     }
 
     d = (b * b) - (4 * a * c);
 
     if (d > 0) {
-        result.numRoots = 2;
-        result.root1 = (-b + sqrt(d)) / (2 * a);
-        result.root2 = (-b - sqrt(d)) / (2 * a);
+        *root1 = (-b + sqrt(d)) / (2 * a);
+        *root2 = (-b - sqrt(d)) / (2 * a);
+        return 2;  // Два корня
     } else if (d == 0) {
-        result.numRoots = 1;
-        result.root1 = -b / (2 * a);
+        *root1 = -b / (2 * a);
+        return 1;  // Один корень
     } else {
-        result.numRoots = 0;
+        return 0;  // Нет корней
     }
-    return result;
 }
 
 
