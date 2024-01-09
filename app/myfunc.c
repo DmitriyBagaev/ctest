@@ -6,15 +6,12 @@
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
     if (buffer == NULL) {
-        // GCOV_EXCL_START
-        return -1;
-        // GCOV_EXCL_STOP
+            return NULL;
     }
 
     buffer[0] = b + 4;
     int returnValue = buffer[0];
-
-    free(buffer); // Освобождение выделенной памяти
+    free(buffer);
     return returnValue;
 }
 
