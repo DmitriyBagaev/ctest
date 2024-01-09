@@ -11,9 +11,14 @@ extern "C" {
 #include "myfunc.h"
 }
 
-TEST(squaresTest, num0) {
-    ASSERT_EQ(squares(1.0), 20.0, 2.0);
+TEST(squaresTest, OneRoot) {
+    ASSERT_EQ(squares(1.0, -2.0, 1.0);
 }
-
+TEST(squaresTest, TwoRoots) {
+    ASSERT_EQ(squares(1.0, -3.0, 2.0);
+}
+TEST(squaresTest, NoRoots) {
+    ASSERT_EQ(squares(1.0, 0.0, 1.0);
+}
 
 #endif // SQUARES_H
