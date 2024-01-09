@@ -17,6 +17,12 @@ class squaresTest : public ::testing::Test {
 protected:
     double root1, root2;
     int result;
+
+    void Override() override {
+        root1 = 0;
+        root2 = 0;
+        result = 0;
+    }
 };
 
 TEST(squaresTest, OneRoot) {
