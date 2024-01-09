@@ -19,22 +19,22 @@ protected:
     int result;
 };
 
-TEST_F(squaresTest, OneRoot) {
+TEST(squaresTest, OneRoot) {
 result = squares(1, -2, 1, &root1, &root2);
 ASSERT_EQ(result, 1);
 }
 
-TEST_F(squaresTest, TwoRoots) {
+TEST(squaresTest, TwoRoots) {
 result = squares(1, -3, 2, &root1, &root2);
 ASSERT_EQ(result, 2);
 }
 
-TEST_F(squaresTest, NoRoots) {
+TEST(squaresTest, NoRoots) {
 result = squares(1, 0, 1, &root1, &root2);
 ASSERT_EQ(result, 0);
 }
 
-TEST_F(squaresTest, NotSquare) {
+TEST(squaresTest, NotSquare) {
 result = squares(0, 2, 1, &root1, &root2);
 ASSERT_EQ(result, -1);
 }
